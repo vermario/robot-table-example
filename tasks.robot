@@ -14,8 +14,8 @@ Minimal task
     ${html_table}=    Get Element Attribute    id:customers    outerHTML
     # No need for the browser anymore:
     Close All Browsers
-    # Parse the html to get the data within it, using a custom keyword
-    ${table_as_data_structure}=     Extract Table Data As Dictionary     ${html_table}
+    # Parse the html to get the data within it, using the keyword from the readTable.py library file:
+    ${table_as_data_structure}=     Extract Data From Table Html    ${html_table}
     # Turn the data into a RPA.Tables table
     ${table}=    Create Table    ${table_as_data_structure}
     # Now we can work it it, for example for loop to log the rows:

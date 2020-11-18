@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-def extract_table_data_as_dictionary(tableHTML):
+def extract_data_from_table_html(tableHTML):
     """Gets the HTML of the table, returns a list of dictionaries"""
     # create a list:
     table_rows = []
